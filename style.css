@@ -1,0 +1,323 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 1s;
+}
+
+:root {
+  --switch-width: 300px;
+  --switch-height: 100px;
+  --toggle-size: 80px;
+  --toggle-margin-left: 10px; /* Use 210 for right align */
+  --toggle-margin-top: 10px;
+  --radius: 1000px;
+}
+
+#btnDarkMode {
+  opacity: 0;
+}
+
+#btnLightMdoe {
+  opacity: 1;
+}
+
+.switch-light {
+  background-color: rgb(86, 139, 184);
+}
+
+.switch-dark {
+  background-color: rgb(29, 29, 29);
+}
+
+.switch-container {
+  width: var(--switch-width);
+  height: var(--switch-height);
+  margin: 20px auto;
+  position: relative;
+  border-radius: var(--radius);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.switch-container .switch-shadow {
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: none;
+  border-radius: 1000px;
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.397);
+  z-index: 10;
+}
+
+.switch-container button {
+  cursor: pointer;
+  height: var(--toggle-size);
+  width: var(--toggle-size);
+  border: none;
+  outline: none;
+  position: absolute;
+  top: var(--toggle-margin-top);
+  left: var(--toggle-margin-left);
+  right: 10px;
+  z-index: 1;
+  border-radius: 1000px;
+  box-shadow: inset 3px 3px 3px rgba(255, 255, 255, 0.534),
+    inset -3px -3px 3px rgba(0, 0, 0, 0.212), 0 0 10px rgba(0, 0, 0, 0.575);
+}
+
+.switch-container .day-switch {
+  background: rgb(255, 223, 80);
+}
+
+.switch-container .night-switch {
+  background: rgb(216, 216, 216);
+}
+
+.switch-container button .moon-hole {
+  background-color: #bbbbbb;
+  position: absolute;
+  border-radius: 1000px;
+  box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.219);
+}
+
+.switch-container button .moon-hole:nth-child(1) {
+  width: 28px;
+  height: 28px;
+  left: 10px;
+  bottom: 20px;
+}
+
+.switch-container button .moon-hole:nth-child(2) {
+  width: 14px;
+  height: 14px;
+  right: 13px;
+  bottom: 20px;
+}
+
+.switch-container button .moon-hole:nth-child(3) {
+  width: 14px;
+  height: 14px;
+  right: 22px;
+  top: 14px;
+}
+
+.switch-container .cirlces {
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: 45px;
+}
+
+.switch-container .cirlces .circle {
+  border-radius: 1000px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: unset;
+}
+
+.switch-container .cirlces .circle:nth-child(1) {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 160px;
+  height: 160px;
+}
+
+.switch-container .cirlces .circle:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 260px;
+  height: 260px;
+}
+
+.switch-container .cirlces .circle:nth-child(3) {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 360px;
+  height: 360px;
+}
+
+.day-art {
+  width: 450px;
+  height: auto;
+  background-color: black;
+  position: absolute;
+  z-index: 100;
+  transform: scale(0.7);
+  right: -90px;
+  bottom: 10px;
+  z-index: -2;
+}
+
+.day-art .cloud-layer {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.day-art .cloud-layer:nth-child(2) {
+  height: 100px;
+  width: 100%;
+  position: absolute;
+  right: 20px;
+  transform: rotate(-5deg);
+  bottom: 20px;
+  opacity: 0.5;
+}
+
+.day-art .cloud-layer .cloud {
+  background-color: white;
+  border-radius: 1000px;
+  position: absolute;
+}
+
+.day-art .cloud-layer .fix {
+  background-color: white;
+  position: absolute;
+}
+
+.day-art .cloud-layer .cloud:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  right: 0;
+  bottom: 0;
+}
+
+.day-art .cloud-layer .cloud:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  right: 20px;
+  bottom: -30px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(3) {
+  width: 80px;
+  height: 80px;
+  right: 100px;
+  bottom: -30px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(4) {
+  width: 80px;
+  height: 80px;
+  right: 150px;
+  bottom: -50px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(5) {
+  width: 80px;
+  height: 80px;
+  right: 200px;
+  bottom: -40px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(6) {
+  width: 80px;
+  height: 80px;
+  right: 240px;
+  bottom: -60px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(7) {
+  width: 80px;
+  height: 80px;
+  right: 290px;
+  bottom: -60px;
+}
+
+.day-art .cloud-layer .cloud:nth-child(8) {
+  width: 80px;
+  height: 80px;
+  right: 340px;
+  bottom: -70px;
+}
+
+.day-art .cloud-layer .fix {
+  width: 80px;
+  height: 80px;
+  right: 0;
+  bottom: 0;
+  border-top-right-radius: 30px;
+}
+
+.star-icon {
+  width: 20px;
+  height: 10px;
+  z-index: 1000;
+  position: relative;
+  margin: 0 auto;
+}
+
+.star-icon .shrink-1 {
+  transform: scale(0.5, 1);
+}
+
+.star-icon .shrink-2 {
+  transform: scale(1, 0.5) translateY(10px);
+}
+
+.star-icon .handle .shape {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-top-right-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+  position: absolute;
+}
+
+.star-icon .shrink-1 .path {
+  transform: rotate(45deg);
+}
+
+.star-icon .shrink-2 .path {
+  transform: rotate(135deg);
+}
+
+.night-art {
+  width: 270px;
+  position: absolute;
+  bottom: 10px;
+  z-index: 1;
+  height: 90px;
+  top: 100px;
+  transform: scale(0.6);
+  left: -40px;
+  z-index: -2;
+}
+
+.night-art .star-layer .star {
+  position: absolute;
+}
+
+.night-art .star-layer .star:nth-child(1) {
+  right: 0;
+}
+
+.night-art .star-layer .star:nth-child(2) {
+  right: 110px;
+  transform: scale(0.5);
+  top: 5px;
+}
+
+.night-art .star-layer .star:nth-child(3) {
+  right: 55px;
+  transform: scale(0.5);
+  top: 40px;
+}
+
+.night-art .star-layer .star:nth-child(4) {
+  right: 80px;
+  transform: scale(0.4);
+  bottom: 10px;
+}
+
+.night-art .star-layer .star:nth-child(5) {
+  left: 80px;
+  bottom: 40px;
+}
+
+.night-art .star-layer .star:nth-child(6) {
+  left: 10px;
+  bottom: 30px;
+  transform: scale(0.5);
+}

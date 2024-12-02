@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark/Light Switch</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="switch-container switch-light" id="divSwitch">
+      <div class="switch-shadow"></div>
+
+      <button class="night-switch" id="btnDarkMode" onclick="ToggleMode()">
+        <div class="moon-hole"></div>
+        <div class="moon-hole"></div>
+        <div class="moon-hole"></div>
+      </button>
+
+      <div class="night-art" id="divStarLayer">
+        <div class="star-layer">
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+          <div class="star">
+            <div class="star-icon">
+              <div class="handle shrink-1">
+                <div class="shape path"></div>
+              </div>
+              <div class="handle shrink-2">
+                <div class="shape path"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="day-switch"
+        id="btnLightMode"
+        onclick="ToggleMode()"
+      ></button>
+
+      <div class="day-art">
+        <div class="cloud-layer" id="divTopCloudLayer">
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="fix"></div>
+        </div>
+
+        <div class="cloud-layer" id="divBottomCloudLayer">
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="cloud"></div>
+          <div class="fix"></div>
+        </div>
+      </div>
+
+      <div class="cirlces">
+        <div class="circle" id="divCircle1"></div>
+        <div class="circle" id="divCircle2"></div>
+        <div class="circle" id="divCircle3"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
